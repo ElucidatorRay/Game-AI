@@ -1,6 +1,6 @@
 import numpy as np
 import math
-from Tic_tac_toe2 import *
+from Tic_tac_toe import *
 
 game = np.array([[0,0,0],[0,0,0],[0,0,0]])
 print('1: Player First \n0: Computer First')

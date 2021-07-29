@@ -147,6 +147,9 @@ def find_max(root):
     MAX = -2**100
     move = None
     for i in range(len(root.childs)):
+        if root.scores[i] >= 9000:
+            return root.scores[i], get_move(root.data, root.childs[i].data)
+    for i in range(len(root.childs)):
         if root.scores[i] + find_min(root.childs[i])[0] > MAX:
             MAX = root.scores[i] + find_min(root.childs[i])[0]
             move = get_move(root.data, root.childs[i].data)
